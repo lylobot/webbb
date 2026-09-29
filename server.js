@@ -145,6 +145,7 @@ const publicFiles = new Map([
   ['/idioma.js', 'idioma.js'],
   ['/panel.js', 'panel.js'],
   ['/premium.js', 'premium.js'],
+  ['/IMAGENRAIZ.png', 'IMAGENRAIZ.png'],
   ['/BOTIMAGEN.png', 'BOTIMAGEN.png'],
   ['/DISCORD.png', 'DISCORD.png']
 ]);
