@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-config-menu-copy="commandsTitle">Lylo | Permisos a los comandos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-config-page="commands">
+  <header class="site-header">
+    <a class="back-home" href="configuracion.html" data-config-back>← <span data-i18n="back">Volver</span></a>
+    <div class="header-actions">
+      <div class="account-menu" data-account-menu>
+        <a class="login-button" href="/auth/login" data-login-link data-i18n="login">Iniciar sesión</a>
+        <button class="account-toggle" type="button" aria-expanded="false" aria-controls="account-dropdown" hidden><img class="account-avatar" data-account-avatar alt=""><span class="account-chevron">⌄</span></button>
+        <div class="account-dropdown" id="account-dropdown" role="menu" hidden>
+          <div class="account-summary"><img class="account-avatar account-avatar-large" data-account-avatar alt=""><span data-account-name>Discord user</span></div>
+          <a href="idioma.html" class="account-action" role="menuitem"><span class="action-icon">A</span><span data-i18n="country">País</span></a>
+          <a href="https://discord.gg/CyNjKbeDVf" target="_blank" rel="noreferrer" class="account-action" role="menuitem"><span class="action-icon">?</span><span data-i18n="support">Soporte</span></a>
+          <button type="button" class="account-action account-logout" data-logout role="menuitem"><span class="action-icon">↪</span><span data-i18n="logout">Cerrar sesión</span></button>
+        </div>
+      </div>
+      <div class="language-picker"><button class="language-toggle" type="button" aria-expanded="false" aria-controls="language-menu"><span class="current-flag">🇲🇽</span><span class="current-language">ES</span><span class="chevron">⌄</span></button><div class="language-menu" id="language-menu" role="menu"></div></div>
+    </div>
+  </header>
+  <main class="config-page">
+    <div class="config-heading"><p class="eyebrow" data-i18n="lyloBrand">Lylo</p><h1 data-config-menu-copy="commandsTitle">Permisos a los comandos</h1><p data-i18n="commandPermissionsNote">Asigna un rol para permitir que sus miembros utilicen cada comando.</p></div>
+    <form class="config-form commands-form" data-config-form>
+      <div class="config-section"><h2 data-i18n="commandPermissionsSection">Permisos por comando</h2><p class="config-note-inline" data-i18n="commandPermissionsNote">El propietario siempre puede usarlos. Sin rol asignado, solo el propietario; al elegir un rol, también podrán usarlo sus miembros.</p><div class="command-role-grid" data-command-roles></div></div>
+      <div class="config-save-actions"><button class="button button-primary save-config" type="submit" data-i18n="saveConfig">Guardar configuración</button><p class="config-message" data-config-message aria-live="polite"></p></div>
+    </form>
+  </main>
+  <script src="script.js"></script>
+  <script src="configuracion.js"></script>
+</body>
+</html>

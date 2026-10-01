@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="titleConfig">Lylo | Configuración</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="back-home" href="gestion.html">← <span data-i18n="back">Volver</span></a>
+    <div class="header-actions">
+      <div class="account-menu" data-account-menu>
+        <a class="login-button" href="/auth/login" data-login-link data-i18n="login">Iniciar sesión</a>
+        <button class="account-toggle" type="button" aria-expanded="false" aria-controls="account-dropdown" hidden><img class="account-avatar" data-account-avatar alt=""><span class="account-chevron">⌄</span></button>
+        <div class="account-dropdown" id="account-dropdown" role="menu" hidden>
+          <div class="account-summary"><img class="account-avatar account-avatar-large" data-account-avatar alt=""><span data-account-name>Discord user</span></div>
+          <a href="idioma.html" class="account-action" role="menuitem"><span class="action-icon">A</span><span data-i18n="country">País</span></a>
+          <a href="https://discord.gg/CyNjKbeDVf" target="_blank" rel="noreferrer" class="account-action" role="menuitem"><span class="action-icon">?</span><span data-i18n="support">Soporte</span></a>
+          <button type="button" class="account-action account-logout" data-logout role="menuitem"><span class="action-icon">↪</span><span data-i18n="logout">Cerrar sesión</span></button>
+        </div>
+      </div>
+      <div class="language-picker"><button class="language-toggle" type="button" aria-expanded="false" aria-controls="language-menu"><span class="current-flag">🇲🇽</span><span class="current-language">ES</span><span class="chevron">⌄</span></button><div class="language-menu" id="language-menu" role="menu"></div></div>
+    </div>
+  </header>
+  <main class="config-page config-hub-page">
+    <div class="config-heading"><p class="eyebrow" data-i18n="lyloBrand">Lylo</p><h1 data-config-menu-copy="homeTitle">Configuración del servidor</h1><p data-config-menu-copy="homeIntro">Elige qué parte del servidor quieres configurar.</p></div>
+    <nav class="config-hub-grid" aria-label="Configuración del servidor" data-config-menu-aria="navigationLabel">
+      <a class="config-hub-card" href="ticket.html" data-config-link>
+        <span class="feature-number">01</span><h2 data-config-menu-copy="ticketsTitle">Configura tus tickets</h2><p data-config-menu-copy="ticketsText">Panel, botones, permisos y registros de tickets.</p><span class="config-hub-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="config-hub-card" href="bienvenida.html" data-config-link>
+        <span class="feature-number">02</span><h2 data-config-menu-copy="welcomeTitle">Configura tus bienvenidas</h2><p data-config-menu-copy="welcomeText">Canal, mensaje, rol automático y vista previa.</p><span class="config-hub-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="config-hub-card" href="comandos.html" data-config-link>
+        <span class="feature-number">03</span><h2 data-config-menu-copy="commandsTitle">Permisos a los comandos</h2><p data-config-menu-copy="commandsText">Asigna un rol a los comandos disponibles.</p><span class="config-hub-arrow" aria-hidden="true">↗</span>
+      </a>
+    </nav>
+  </main>
+  <script src="script.js"></script><script src="configuracion.js"></script>
+</body>
+</html>

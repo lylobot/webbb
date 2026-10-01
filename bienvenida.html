@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-config-menu-copy="welcomeTitle">Lylo | Configura tus bienvenidas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-config-page="welcome">
+  <header class="site-header">
+    <a class="back-home" href="configuracion.html" data-config-back>← <span data-i18n="back">Volver</span></a>
+    <div class="header-actions">
+      <div class="account-menu" data-account-menu>
+        <a class="login-button" href="/auth/login" data-login-link data-i18n="login">Iniciar sesión</a>
+        <button class="account-toggle" type="button" aria-expanded="false" aria-controls="account-dropdown" hidden><img class="account-avatar" data-account-avatar alt=""><span class="account-chevron">⌄</span></button>
+        <div class="account-dropdown" id="account-dropdown" role="menu" hidden>
+          <div class="account-summary"><img class="account-avatar account-avatar-large" data-account-avatar alt=""><span data-account-name>Discord user</span></div>
+          <a href="idioma.html" class="account-action" role="menuitem"><span class="action-icon">A</span><span data-i18n="country">País</span></a>
+          <a href="https://discord.gg/CyNjKbeDVf" target="_blank" rel="noreferrer" class="account-action" role="menuitem"><span class="action-icon">?</span><span data-i18n="support">Soporte</span></a>
+          <button type="button" class="account-action account-logout" data-logout role="menuitem"><span class="action-icon">↪</span><span data-i18n="logout">Cerrar sesión</span></button>
+        </div>
+      </div>
+      <div class="language-picker"><button class="language-toggle" type="button" aria-expanded="false" aria-controls="language-menu"><span class="current-flag">🇲🇽</span><span class="current-language">ES</span><span class="chevron">⌄</span></button><div class="language-menu" id="language-menu" role="menu"></div></div>
+    </div>
+  </header>
+  <main class="config-page">
+    <div class="config-heading"><p class="eyebrow" data-i18n="lyloBrand">Lylo</p><h1 data-config-menu-copy="welcomeTitle">Configura tus bienvenidas</h1><p data-i18n="configNote">Los cambios solo afectan al servidor seleccionado.</p></div>
+    <form class="config-layout" data-config-form>
+      <section class="config-form">
+        <div class="config-section">
+          <h2 data-i18n="welcomeSystem">Sistema de bienvenidas</h2>
+          <label class="check-line"><input type="checkbox" name="welcomeEnabled"> <span data-i18n="welcomeEnabled">Activar bienvenidas y autorol</span></label>
+          <label for="welcomeChannelId" data-i18n="welcomeChannel">Canal de bienvenida</label><select id="welcomeChannelId" name="welcomeChannelId"><option value="">Selecciona un canal</option></select>
+          <label for="welcomeLinkChannelId" data-i18n="welcomeLinkChannel">Canal para la variable {channel}</label><select id="welcomeLinkChannelId" name="welcomeLinkChannelId"><option value="">Sin canal vinculado</option></select>
+          <label for="welcomeTitle" data-i18n="welcomeTitleLabel">Título del mensaje</label><input id="welcomeTitle" name="welcomeTitle" maxlength="250">
+          <label for="welcomeText" data-i18n="welcomeTextLabel">Texto del mensaje</label><textarea id="welcomeText" name="welcomeText" rows="5" maxlength="3000"></textarea>
+          <p class="config-note-inline" data-i18n="welcomeVariables">Variables: {username}, {server}, {memberCount}, {channel}. El color se elige al azar.</p>
+          <label for="welcomeRoleId" data-i18n="welcomeRole">Rol automático</label><select id="welcomeRoleId" name="welcomeRoleId"><option value="">Sin rol automático</option></select>
+        </div>
+        <div class="config-save-actions"><button class="button button-primary save-config" type="submit" data-i18n="saveConfig">Guardar configuración</button><p class="config-message" data-config-message aria-live="polite"></p></div>
+      </section>
+      <aside class="config-preview"><p class="eyebrow" data-i18n="previewLabel">Vista previa real</p><div class="discord-preview"><div class="preview-channel"><span>#</span> <span data-config-menu-copy="welcomeChannel">bienvenida</span></div><div class="preview-message"><img class="preview-avatar" src="BOTIMAGEN.png" alt="Lylo" onerror="this.hidden=true; this.nextElementSibling.hidden=false"><span class="preview-avatar-fallback" hidden>LY</span><div class="preview-message-body"><div class="preview-user"><strong>Lylo</strong><span>APP</span><time data-i18n="previewTime">Hoy a las 12:00</time></div><div data-preview-content></div></div></div></div></aside>
+    </form>
+  </main>
+  <script src="script.js"></script>
+  <script src="configuracion.js"></script>
+</body>
+</html>
